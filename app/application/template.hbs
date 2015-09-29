@@ -1,0 +1,23 @@
+<h1>Is your JSON JSONAPI compliant?</h1>
+
+<div class="cf">
+  <div class="left-column">
+    <h3>Your JSON</h3>
+
+    {{textarea value=input class="input"}}
+
+    <button {{action "validate"}}>Validate</button>
+  </div>
+
+  <div class="right-column">
+    {{#if isValid}}
+      <h3>Yes!</h3>
+    {{else}}
+      <h3>No!</h3>
+
+      <div>
+        {{errors}}
+      </div>
+    {{/if}}
+  </div>
+</div>

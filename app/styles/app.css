@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.left-column {
+  float: left;
+  width: 75%;
+}
+
+.right-column {
+  float: left;
+  width: 25%;
+}
+
+.input {
+  height: 500px;
+  width: 100%;
+  overflow-y: scroll;
+}
