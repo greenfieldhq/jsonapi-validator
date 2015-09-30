@@ -1,23 +1,33 @@
-<h1>Is your JSON JSONAPI compliant?</h1>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">JSON API Validator</a>
+  </div>
+</div>
+</nav>
 
-<div class="cf">
-  <div class="left-column">
-    <h3>Your JSON</h3>
+<div class="shift">
+  <h3>Is your data structure JSON API compliant?</h3>
+  <div class="validity">
+    {{#if isValid}}
+    <h3 class="alert alert-success">Yes!</h3>
+    {{else}}
+    <h3 class="alert alert-danger">No!</h3>
 
-    {{textarea value=input class="input"}}
-
-    <button {{action "validate"}}>Validate</button>
+    <div>
+      {{errors}}
+    </div>
+    {{/if}}
   </div>
 
-  <div class="right-column">
-    {{#if isValid}}
-      <h3>Yes!</h3>
-    {{else}}
-      <h3>No!</h3>
+  <div class="cf">
+    <div class="left-column">
+      {{textarea
+      value=input class="input"
+      placeholder="Paste what you want validated in here!"}}
 
-      <div>
-        {{errors}}
-      </div>
-    {{/if}}
+      <button class="btn btn-primary btn-lg" {{action "validate"}}>Validate</button>
+    </div>
+
   </div>
 </div>

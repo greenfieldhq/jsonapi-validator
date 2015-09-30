@@ -1,3 +1,7 @@
+body {
+  background-color: #FAF4F1;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -21,13 +25,17 @@ html {
   width: 75%;
 }
 
-.right-column {
-  float: left;
+.validity {
   width: 25%;
 }
 
+.shift {
+  margin-left: 15px;
+}
+
 .input {
-  height: 500px;
+  height: 400px;
   width: 100%;
   overflow-y: scroll;
+  font-family: monaco;
 }
