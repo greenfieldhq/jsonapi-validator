@@ -20,6 +20,7 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   app.import('bower_components/tv4/tv4.js');
+  app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
 
   return app.toTree();
 };
